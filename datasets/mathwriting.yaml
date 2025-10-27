@@ -1,0 +1,18 @@
+load:
+- type: train
+  path: ~/data/mathwriting/2024/train/
+  glob: '*.inkml'
+- type: train
+  path: ~/data/mathwriting/2024/synthetic/
+  glob: '*.inkml'
+- type: valid
+  path: ~/data/mathwriting/2024/valid/
+  glob: '*.inkml'
+- type: test
+  path: ~/data/mathwriting/2024/test/
+  glob: '*.inkml'
+dump:
+  path: ~/data/pickle/gryph_mathwriting.pkl
+word: '\\(?:mathbb{\w}|begin{\w+}|end{\w+}|operatorname\*|[a-zA-Z]+|.)|.'
+norm:
+  ' ': []

@@ -1,0 +1,22 @@
+[project]
+name = "gryph"
+version = "0.1.0"
+dependencies = [
+  "PyYAML",
+  "dacite",
+  "distance",
+  "lxml",
+  "mmcv",
+  "mmengine",
+  "more-itertools",
+  "positional-encodings[pytorch]",
+  "toolz",
+  "tqdm",
+  "transformers",
+]
+
+[build-system]
+requires = ["setuptools", "torch>=2.4"]
+
+[tool.setuptools.packages.find]
+include = ["gryph"]
