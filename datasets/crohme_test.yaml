@@ -1,0 +1,89 @@
+load:
+- type: '2014'
+  path: ~/data/crohme/CROHME2014_data/TestEM2014GT/
+  glob: '*.inkml'
+- type: '2016'
+  path: ~/data/crohme/CROHME2016_data/TEST2016_INKML_GT/
+  glob: '*.inkml'
+- type: '2019'
+  path: ~/data/crohme/CROHME2019_data/Task1_onlineRec/MainTask_formula/Test2019_GT/
+  glob: '*.inkml'
+- type: '2023'
+  path: ~/data/crohme/TC11_CROHME23/INKML/test/CROHME2023_test/
+  glob: '*.inkml'
+dump:
+  path: ~/data/pickle/gryph_crohme_test.pkl
+word: '\\(?:mathbb{\w}|begin{\w+}|end{\w+}|operatorname\*|[a-zA-Z]+|.)|.'
+norm:
+  "'": ['\prime']
+  "\t": []
+  ' ': []
+  '$': []
+  '\ ': []
+  '\!': []
+  '\;': []
+  '\Big': []
+  '\Bigg': []
+  '\cdots': ['\cdot', '\cdot', '\cdot']
+  '\cos': ['c', 'o', 's']
+  '\cosLt': ['c', 'o', 's', 'L', 't']
+  '\cosk': ['c', 'o', 's', 'k']
+  '\geq': ['\ge']
+  '\geqa': ['\ge', 'a']
+  '\geqd': ['\ge', 'd']
+  '\gt': ['>']
+  '\gty': ['>', 'y']
+  '\inX': ['\in', 'X']
+  '\inftyh': ['\infty', 'h']
+  '\intC': ['\int', 'C']
+  '\intb': ['\int', 'b']
+  '\intd': ['\int', 'd']
+  '\intdA': ['\int', 'd', 'A']
+  '\intdz': ['\int', 'd', 'z']
+  '\lbrack': ['[']
+  '\ldots': ['.', '.', '.']
+  '\ldotsd': ['.', '.', '.', 'd']
+  '\ldotsx': ['.', '.', '.', 'x']
+  '\left': []
+  '\leq': ['\le']
+  '\leqb': ['\le', 'b']
+  '\leqx': ['\le', 'x']
+  '\leqy': ['\le', 'y']
+  '\lim': ['l', 'i', 'm']
+  '\limits': []
+  '\log': ['l', 'o', 'g']
+  '\logf': ['l', 'o', 'g', 'f']
+  '\logx': ['l', 'o', 'g', 'x']
+  '\logz': ['l', 'o', 'g', 'z']
+  '\lt': ['<']
+  '\ltN': ['<', 'N']
+  '\mathrm': []
+  '\mbox': []
+  '\mub': ['\mu', 'b']
+  '\neq': ['\ne']
+  '\neqa': ['\ne', 'a']
+  '\parallel': ['|', '|']
+  '\piB': ['\pi', 'B']
+  '\piE': ['\pi', 'E']
+  '\piT': ['\pi', 'T']
+  '\pij': ['\pi', 'j']
+  '\pmiy': ['\pm', 'i', 'y']
+  '\rbrack': [']']
+  '\right': []
+  '\rightarrowc': ['\rightarrow', 'c']
+  '\rightarrowx': ['\rightarrow', 'x']
+  '\rightarrowy': ['\rightarrow', 'y']
+  '\rightarrowz': ['\rightarrow', 'z']
+  '\sin': ['s', 'i', 'n']
+  '\sinnv': ['s', 'i', 'n', 'n', 'v']
+  '\sinx': ['s', 'i', 'n', 'x']
+  '\sinxe': ['s', 'i', 'n', 'x', 'e']
+  '\siny': ['s', 'i', 'n', 'y']
+  '\sqrth': ['\sqrt', 'h']
+  '\sumf': ['\sum', 'f']
+  '\tan': ['t', 'a', 'n']
+  '\thetak': ['\theta', 'k']
+  '\timesX': ['\times', 'X']
+  '\timesY': ['\times', 'Y']
+  '\timesd': ['\times', 'd']
+  '\to': ['\rightarrow']

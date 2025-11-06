@@ -16,10 +16,13 @@ $ pip install -e .
 
 See [releases](https://github.com/JG1VPP/gryphone/releases).
 
-### Dataset
+### Datasets
 
 Download the following datasets:
 
+- [CROHME 2014](https://tc11.cvc.uab.es/datasets/CROHME-2014_2)
+- [CROHME 2016](https://tc11.cvc.uab.es/datasets/ICFHR-CROHME-2016_1)
+- [CROHME 2019](https://tc11.cvc.uab.es/datasets/ICDAR2019-CROHME-TDF_1)
 - [MathWriting](https://github.com/google-research/google-research/tree/master/mathwriting)
 
 ### Preprocess
@@ -27,6 +30,7 @@ Download the following datasets:
 Run [preprocess.py](preprocess.py) as follows:
 
 ```sh
+$ python3 preprocess.py datasets/crohme_test.yaml
 $ python3 preprocess.py datasets/mathwriting.yaml
 ```
 
@@ -34,6 +38,10 @@ The datasets must be placed in `data` directory as follows:
 
 ```sh
 $ ls ~/data
+crohme/
+  CROHME2014_data/
+  CROHME2016_data/
+  CROHME2019_data/
 mathwriting/
   2024/
     test/
@@ -55,6 +63,7 @@ mathwriting/
       0005ea8e21185d36.inkml
       00061be0501a1fa8.inkml
 pickle/
+  gryph_crohme_test.pkl
   gryph_mathwriting.pkl
 ```
 
