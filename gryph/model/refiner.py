@@ -13,7 +13,7 @@ class FormulaRefiner(BaseModule):
         self.model = build(model, **kwargs)
 
         # param
-        self.steps = steps
+        self.steps = steps + 1
 
     def forward(self, train: bool, **kwargs):
         if train:
@@ -25,7 +25,7 @@ class FormulaRefiner(BaseModule):
         return self.model(**kwargs)
 
     def _valid(self, **kwargs):
-        for time in torch.linspace(1, 0, self.steps):
+        for time in torch.linspace(1, 0, self.steps)[1:]:
             kwargs = self.model(**kwargs, time=time)
 
         return kwargs
