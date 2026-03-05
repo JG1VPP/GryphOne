@@ -1,5 +1,6 @@
 from collections import ChainMap
 
+import torch
 import torch.nn as nn
 from mmengine.model import BaseModel
 
@@ -38,7 +39,8 @@ class FormulaScanner(BaseModel):
     def forward(self, mode: str, **kwargs):
         if mode == "loss":
             return self._train(**kwargs)
-        else:
+
+        with torch.no_grad():
             return self._valid(**kwargs)
 
     def _train(self, **targets):

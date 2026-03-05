@@ -41,7 +41,7 @@ def process(config: str, weight: str, split: str, store: str):
     config = Config.fromfile(config)
 
     # model
-    model = build(config.model).to(get_device())
+    model = build(config.model).to(get_device()).eval()
     load_checkpoint(model, weight, strict=False)
 
     # infer
