@@ -1,6 +1,12 @@
 # GryphOne
 
-Hand-written mathematical expression recognition based on discrete diffusion using triplet attention blocks.
+Official implementation of ["GryphOne: Symbol-Aware Masked Diffusion for Structural Refinement in Offline Handwritten Mathematical Expression Recognition"](https://doi.org/10.48550/arXiv.2602.03370) (**ECCV 2026**).
+
+## Overview
+
+GryphOne iteratively refines symbols and their relationships with symbol-aware masked diffusion:
+
+![overview](overview.svg)
 
 ## Usage
 
@@ -89,3 +95,20 @@ Use [LgEval](https://univ-nantes.io/crohme/lgeval) for strict evaluation.
 
 This project is licensed under the MIT License.
 See [LICENSE](LICENSE) for more details.
+
+## Citation
+
+```latex
+@inproceedings{ECCV26KAT,
+  author={Takaya Kawakatsu and Ryo Ishiyama},
+  title={GryphOne: Symbol-Aware Masked Diffusion for Structural Refinement in Offline Handwritten Mathematical Expression Recognition},
+  booktitle={Computer Vision -- ECCV 2026},
+  publisher={Springer Nature Switzerland},
+  year={2026},
+  pages={609--624},
+}
+```
+
+## See Also
+
+[MuTabNet (ICDAR2024)](https://github.com/JG1VPP/MuTabNet): our table recognition framework for ICDAR 2024 and 2026.
